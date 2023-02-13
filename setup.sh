@@ -10,7 +10,7 @@ minikube addons enable metrics-server
 kubectl get node minikube -o jsonpath='{.status.capacity}'
 
 eval $(minikube docker-env)
-sh load_all.sh
+sh images/load_all.sh
 
 kubectl apply -k ./deployment
 
